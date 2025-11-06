@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>ورود به نویسا</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="logo">
+    <img src="logo.png" alt="لوگو">
+    <h1>ورود به نویسا</h1>
+  </div>
+
+  <div class="post">
+    <form onsubmit="event.preventDefault(); loginUser();">
+      <input type="text" id="username" placeholder="نام کاربری"><br>
+      <input type="password" id="password" placeholder="رمز عبور"><br>
+      <input type="submit" value="ورود">
+    </form>
+    <p>حساب نداری؟ <a href="signup.html">ثبت‌نام کن</a></p>
+  </div>
+
+  <script>
+    function loginUser() {
+      const u = document.getElementById("username").value;
+      const p = document.getElementById("password").value;
+      if (u === "mohammad" && p === "1234") {
+        window.location.href = "dashboard.html";
+      } else {
+        alert("نام کاربری یا رمز اشتباه است!");
+      }
+    }
+  </script>
+
+</body>
+</html>
